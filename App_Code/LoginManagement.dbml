@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="WholesaleBazar" Class="LoginManagementDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=ROADZEN-PC;Initial Catalog=WholesaleBazar;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="WholesaleBazarConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.loginProcess" Method="loginProcess">
+    <Parameter Name="stUserName" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="stPassword" Type="System.String" DbType="VarChar(200)" />
+    <ElementType Name="loginProcessResult">
+      <Column Name="inEntityId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="stUserName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="inEntityTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="stEntityName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="stEntityTypeName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

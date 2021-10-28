@@ -31,9 +31,11 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">Sign in to start your session</p>
 
-      <form action="../../index3.html" method="post">
+     <form id="frm" runat="server">
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Email">
+         <asp:TextBox ID="txtusername" class="form-control" runat="server"></asp:TextBox>
+             <asp:RequiredFieldValidator ID="reqUserId" runat="server" ControlToValidate="txtusername"
+                            Display="Dynamic" ForeColor="Red" ErrorMessage="User name is Required!"></asp:RequiredFieldValidator>
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -41,7 +43,9 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password">
+         <asp:TextBox ID="txtpassword" class="form-control" TextMode="Password" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="reqPassword" runat="server" ControlToValidate="txtpassword"
+                            Display="Dynamic" ForeColor="Red" ErrorMessage="Password is Required!"></asp:RequiredFieldValidator>
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -59,7 +63,8 @@
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+              <asp:Button  ID="btnlogin" runat="server" class="btn btn-primary btn-block" Text="Sign In" OnClick="btnlogin_Click"/>
+            <%--<button type="submit" class="btn btn-primary btn-block">Sign In</button>--%>
           </div>
           <!-- /.col -->
         </div>
